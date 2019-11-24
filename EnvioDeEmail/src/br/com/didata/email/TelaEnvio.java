@@ -62,14 +62,14 @@ public class TelaEnvio {
 		frmEnvioDeEmail.getContentPane().setLayout(null);
 
 		JLabel lblDe = new JLabel("De:");
-		lblDe.setBounds(10, 14, 57, 14);
+		lblDe.setBounds(10, 14, 89, 14);
 		frmEnvioDeEmail.getContentPane().add(lblDe);
 
 		txtDe = new JTextField();
 		txtDe.setToolTipText("E-mail origem");
 		txtDe.setEditable(false);
 		txtDe.setText("leonardo.vizagre@gmail.com");
-		txtDe.setBounds(77, 11, 250, 20);
+		txtDe.setBounds(100, 11, 227, 20);
 		frmEnvioDeEmail.getContentPane().add(txtDe);
 		txtDe.setColumns(10);
 
@@ -79,7 +79,7 @@ public class TelaEnvio {
 			public void focusLost(FocusEvent e) {
 				if (txtPara.getText().isEmpty() == true) {
 					JOptionPane.showMessageDialog( null,
-							"Campo <para> não preenchido!",
+							"Campo <para> nao preenchido!",
 							"Mensagem do sistema", JOptionPane.ERROR_MESSAGE);
 
 					txtPara.requestFocus();
@@ -88,18 +88,18 @@ public class TelaEnvio {
 		});
 
 		txtPara.setColumns(10);
-		txtPara.setBounds(77, 42, 250, 20);
+		txtPara.setBounds(100, 42, 227, 20);
 		frmEnvioDeEmail.getContentPane().add(txtPara);
 
 		txtAssunto = new JTextField();
 		txtAssunto.setToolTipText("Assunto do e-mail");
 
 		txtAssunto.setColumns(10);
-		txtAssunto.setBounds(77, 73, 413, 20);
+		txtAssunto.setBounds(100, 73, 390, 20);
 		frmEnvioDeEmail.getContentPane().add(txtAssunto);
 
 		JLabel lblMensagem = new JLabel("Mensagem:");
-		lblMensagem.setBounds(10, 101, 75, 14);
+		lblMensagem.setBounds(10, 101, 113, 14);
 		frmEnvioDeEmail.getContentPane().add(lblMensagem);
 
 		JButton btnEnviar = new JButton("Enviar");
@@ -136,7 +136,7 @@ public class TelaEnvio {
 		frmEnvioDeEmail.getContentPane().add(btnEnviar);
 
 		JButton btnLimpar = new JButton("Limpar");
-		btnLimpar.setToolTipText("Limpar formul\u00E1rio");
+		btnLimpar.setToolTipText("Limpar formulario");
 		btnLimpar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				txtDe.setText(null);
@@ -150,20 +150,21 @@ public class TelaEnvio {
 		frmEnvioDeEmail.getContentPane().add(btnLimpar);
 
 		JLabel lblPara = new JLabel("Para:");
-		lblPara.setBounds(10, 45, 57, 14);
+		lblPara.setBounds(10, 45, 89, 14);
 		frmEnvioDeEmail.getContentPane().add(lblPara);
 
 		JLabel lblAssunto = new JLabel("Assunto:");
-		lblAssunto.setBounds(10, 76, 57, 14);
+		lblAssunto.setBounds(10, 76, 89, 14);
 		frmEnvioDeEmail.getContentPane().add(lblAssunto);
 		
 		JScrollPane scrollPane = new JScrollPane();
-		scrollPane.setBounds(77, 122, 413, 144);
+		scrollPane.setBounds(19, 127, 471, 144);
 		frmEnvioDeEmail.getContentPane().add(scrollPane);
 		
 		txtMensagem = new JTextArea();
+		txtMensagem.setBounds(22, 127, 468, 141);
+		frmEnvioDeEmail.getContentPane().add(txtMensagem);
 		txtMensagem.setToolTipText("Texto");
-		scrollPane.setViewportView(txtMensagem);
 		txtMensagem.setColumns(10);
 
 	}

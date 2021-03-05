@@ -8,8 +8,7 @@ public class TestaCao {
 		cao.setPeso(5);
 		
 		System.out.println("Fala " + cao.getNome());
-		cao.emitirSom();
-		
+		cao.emitirSom();		
 
 	}
 
